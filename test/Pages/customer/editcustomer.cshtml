@@ -1,0 +1,92 @@
+﻿@page
+@model School_Ms.Pages.customer.editcustomerModel
+@{
+
+
+
+}
+
+@if (Model.errormsg.Length > 0)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        @Model.errormsg
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+    </div>
+}
+
+
+<div class="container">
+    <center>
+        <h1>Customer Details</h1>
+        <h3>Edit Customer</h3>
+
+    </center>
+
+    <div class="card mx-auto" style="width:90%; box-shadow: 0 0 10px 0 lightgray;">
+        <div class="card-body">
+            <h3 class="card-header">Update Info </h3>
+            <br />
+            <form method="POST">
+                <input type="hidden" name="id" value="@Model.customerinfo.customer_id" />
+                <div class="row g-6">
+                    <div class="col">
+                        <b><label for="fullname">Fullname</label></b>
+                        <input type="text" class="form-control" name="Fullname" id="fullname" value="@Model.customerinfo.full_name" required autocomplete="off" />
+                    </div>
+                    <div class="col">
+                        <b><label for="phone">Phone</label></b>
+                        <input type="number" class="form-control" name="Phone" value="@Model.customerinfo.phone_number" id="phone" required autocomplete="off" />
+                    </div>
+                    
+
+                    <div class="col">
+                        <b><label for="gender">Gender</label></b>
+                        <select class="form-control" name="Gender" id="Gender" required>
+                            <option value="@Model.customerinfo.gender">@Model.customerinfo.gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+
+                </div>
+                <br />
+                <div class="row g-6">
+                    
+
+                    <div class="col">
+                        <b><label for="email">Email</label></b>
+                        <input type="Email" class="form-control" name="Email" value="@Model.customerinfo.email" id="email" required autocomplete="off" />
+                    </div>
+
+                    <div class="col">
+                        <b><label for="Address"> Address</label></b>
+                        <input type="text" class="form-control" name="Subject" value="@Model.customerinfo.address" id="email" required autocomplete="off" />
+                    </div>
+
+
+                
+                    <div class="col">
+                        <b><label for="Age">Age</label></b>
+                        <input type="number" class="form-control" name="Age" id="age" value="@Model.customerinfo.age" required autocomplete="off" />
+                    </div>
+                </div>
+                <br>
+                <button type="submit" style="width: 100px" class="btn btn-dark">Update</button>
+                <a href="#" onclick="history.back()">Back</a>
+            </form>
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+</div>

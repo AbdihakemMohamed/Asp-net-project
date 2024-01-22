@@ -1,0 +1,90 @@
+﻿@page
+@model test.Pages.customer.add_studentModel
+@{
+}
+@if (Model.errormsg.Length > 0)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        @Model.errormsg
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+    </div>
+}
+
+<div class="container">
+    <center>
+ <h1>student management</h1>
+     <h3>Add Student</h3>
+
+    </center>
+
+    <div class="card mx-auto" style="width:90%; box-shadow: 0 0 10px 0 lightgray;">
+<div class="card-body">  
+    <h3 class="card-header">add </h3>
+    <br/>
+            <form method="post">
+                <div class="row g-6">
+                    <div class="col">
+                        <b><label for="fullname">Fullname</label></b>
+                        <input type="text" class="form-control" name="Fullname" id="fullname" required autocomplete="off" />
+                    </div>
+
+                    <div class="col">
+                        <b><label for="address">Address</label></b>
+                        <input type="text" class="form-control" name="Address" id="address" required autocomplete="off" />
+                    </div>
+
+                    <div class="col">
+                        <b><label for="gender">Gender</label></b>
+                        <select class="form-control" name="Gender" id="Gender" required>
+                            <option selected disabled>Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+
+                </div>
+                <br />
+                <div class="row g-6">
+                    <div class="col">
+                        <b><label for="phone">Phone</label></b>
+                        <input type="number" class="form-control" name="Phone" id="phone" required autocomplete="off" />
+                    </div>
+
+                    <div class="col">
+                        <b><label for="email">Email</label></b>
+                        <input type="Email" class="form-control" name="Email" id="email" required autocomplete="off" />
+                    </div>
+
+                    <div class="col">
+                        <b><label for="Subject">Subject</label></b>
+                        <input type="text" class="form-control" name="Subject" id="email" required autocomplete="off" />
+                    </div>
+
+
+                </div>
+                <div class="row g-2">
+                    <div class="col">
+                        <b><label for="Age">Age</label></b>
+                        <input type="number" class="form-control" name="Age" id="age" required autocomplete="off" />
+                    </div>
+                </div>
+                <br>
+                <button style="width: 100px" type="submit" class="btn btn-secondary">Save</button>
+                <a href="/customer/index">Back</a>
+            </form>
+
+
+
+
+
+
+</div>
+
+
+    </div>
+
+
+
+
+</div>

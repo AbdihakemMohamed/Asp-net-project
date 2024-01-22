@@ -1,0 +1,76 @@
+﻿@page
+@model School_Ms.Pages.teachers.add_teacherModel
+@{
+}
+
+<div class="container">
+    <center>
+        <h1>student management</h1>
+        <h3>Add Teacher</h3>
+
+    </center>
+
+    <div class="card mx-auto" style="width:90%; box-shadow: 0 0 10px 0 lightgray;">
+        <div class="card-body">
+            <h3 class="card-header">add </h3>
+            <br />
+            <form method="post">
+                <div class="row g-6">
+                    <div class="col">
+                        <b><label for="fullname">Fullname</label></b>
+                        <input type="text" class="form-control" name="Fullname" id="fullname" required autocomplete="off" />
+                    </div>
+
+                    <div class="col">
+                        <b><label for="address">Address</label></b>
+                        <input type="text" class="form-control" name="Address" id="address" required autocomplete="off" />
+                    </div>
+
+                    <div class="col">
+                        <b><label for="gender">Gender</label></b>
+                        <select class="form-control" name="Gender" id="gender" required>
+                            <option selected disabled>Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+
+                </div>
+                <br />
+                <div class="row g-6">
+                    <div class="col">
+                        <b><label for="phone">Phone</label></b>
+                        <input type="text" class="form-control" name="Phone" id="phone" required autocomplete="off" />
+                    </div>
+
+                    <div class="col">
+                        <b><label for="email">Email</label></b>
+                        <input type="text" class="form-control" name="Email" id="email" required autocomplete="off" />
+                    </div>
+
+                    <div class="col">
+                        <b><label for="email">Subject</label></b>
+                        <input type="text" class="form-control" name="Email" id="email" required autocomplete="off" />
+                    </div>
+
+                </div>
+
+                <br>
+                <button style="width: 100px" type="submit" class="btn btn-secondary">Save</button>
+                <a href="/teachers/index">Back</a>
+            </form>
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+    </div>
