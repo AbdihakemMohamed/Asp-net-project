@@ -1,0 +1,86 @@
+﻿@page
+@model Bike_Ms.Pages.bikes.edit_bikeModel
+@{
+}
+@if (Model.errormsg.Length > 0)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        @Model.errormsg
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+    </div>
+}
+
+
+
+
+
+
+<div class="container">
+    <center>
+        <h1>Bike  System</h1>
+        <h3>Management</h3>
+
+    </center>
+
+    <div class="card mx-auto" style="width:90%; box-shadow: 0 0 10px 0 lightgray;">
+        <div class="card-body">
+            <h3 class="card-header text-center">Add New </h3>
+            <br />
+            <form method="post">
+                <div class="row g-2">
+                    <div class="col">
+                        <input type="hidden" name="id" value="@Model.bikesinfo.BikeID" />
+                        <b><label for="model">Model</label></b>
+                        <input type="text" class="form-control" value="@Model.bikesinfo.Model" name="ah" id="fullname" required autocomplete="off" />
+                    </div>
+
+                    <div class="col">
+                        <b><label for="address">Type</label></b>
+                        <input type="text" class="form-control" value="@Model.bikesinfo.Type" name="type" id="address" required autocomplete="off" />
+                    </div>
+                </div>
+                 <div class="row g-2">
+                    <div class="col">
+                        <b><label for="Status">Status</label></b>
+                        <select class="form-control" name="status" id="Status" required>
+                            <option value="@Model.bikesinfo.Status">@Model.bikesinfo.Status</option>
+                            <option value="Rented">Rented</option>
+                            <option value="Stored">Stored</option>
+                            <option value="Arrival">Arrival</option>
+                            <option value="other">other</option>
+                        </select>
+                    </div>
+
+               
+                    <div class="col">
+                        <b><label for="phone">Location</label></b>
+                        <input type="text" class="form-control" value="@Model.bikesinfo.Location" name="location" id="phone" required autocomplete="off" />
+                    </div>
+
+                   
+
+
+                
+                </div>
+               
+                <br>
+                <button style="width: 100px" type="submit" class="btn btn-secondary">Update</button>
+                <a href="/bikes/index">Back</a>
+            </form>
+
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+</div>
+
