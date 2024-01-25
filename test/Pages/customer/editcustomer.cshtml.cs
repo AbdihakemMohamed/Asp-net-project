@@ -43,7 +43,7 @@ namespace School_Ms.Pages.customer
             string Fullname = Request.Form["Fullname"];
             string Gender = Request.Form["Gender"];
             string phone = Request.Form["Phone"];
-            string Address = Request.Form["Address"];
+            string Address = Request.Form["address"];
             string age = Request.Form["Age"];
             string email = Request.Form["Email"];
             string id = Request.Form["id"];
@@ -53,15 +53,7 @@ namespace School_Ms.Pages.customer
 
                 SqlConnection connection = new SqlConnection(con);
                 connection.Open();
-                string sql = " UPDATE customers set " +
-                    "full_name = '" + Fullname + "'," +
-                    "gender = '" + Gender + "' ," +
-                    "phone_number = '" + phone + "' , " +
-                    "address = '" + Address + "', " +
-                    "email = '" + email + "', " +
-                    "age = '" + age + "' " +
-                    "where customers = '" + id + "' ";
-
+                string sql = "UPDATE customers SET full_name = '" + Fullname + "', gender = '" + Gender + "', phone_number = '" + phone + "', address = '" + Address + "', email = '" + email + "', age = '" + age + "' WHERE customer_id = '" + id + "'";
                 SqlCommand command = new SqlCommand(sql, connection);
                 command.ExecuteNonQuery();
                 connection.Close();
